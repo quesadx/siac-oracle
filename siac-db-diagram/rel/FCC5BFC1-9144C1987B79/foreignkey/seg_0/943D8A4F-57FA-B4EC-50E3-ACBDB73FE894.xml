@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="943D8A4F-57FA-B4EC-50E3-ACBDB73FE894" containerWithKeyObject="DB2A6294-D95A-251A-CF22-E588219E8B98" localFKIndex="73BA5B7D-E61D-A926-0A4F-30A745B3020C" name="FK_FAMILIA_COMUNIDAD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F33494B2-3C5F-ECC4-F023-40AF5CDA19E1</importedID>
+<referredTableLongName>SIAC_COMUNIDAD</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6E2A3B25-D94F-3F61-9CF2-CB6BA1D017C6</referredTableID>
+<keyObject>53083BF6-CCC9-5C75-D2A5-0DC57243748C</keyObject>
+<referredKeyID>53083BF6-CCC9-5C75-D2A5-0DC57243748C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_COMUNIDAD</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

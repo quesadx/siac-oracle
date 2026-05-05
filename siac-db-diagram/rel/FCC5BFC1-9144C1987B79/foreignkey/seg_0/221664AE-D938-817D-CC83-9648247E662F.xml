@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="221664AE-D938-817D-CC83-9648247E662F" containerWithKeyObject="952B13A6-399C-CF4F-BF0A-31AD79BD7D7B" localFKIndex="3B7F2EDA-73B2-2770-E518-42D540BC7294" name="FK_USUARIO_ROL">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>76F7B800-C88A-68CA-1B06-55D95C29F293</importedID>
+<referredTableLongName>SIAC_ROL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>611F0490-05C0-8CBC-5A84-C5220FF7E1BD</referredTableID>
+<keyObject>0CF295FC-FF74-953B-20EA-0769A8F1B835</keyObject>
+<referredKeyID>0CF295FC-FF74-953B-20EA-0769A8F1B835</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ROL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

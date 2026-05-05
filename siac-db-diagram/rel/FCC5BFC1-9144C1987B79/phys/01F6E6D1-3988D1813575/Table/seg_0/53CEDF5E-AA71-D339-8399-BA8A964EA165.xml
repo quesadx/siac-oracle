@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="SIAC_BENEFICIARIO" directorySegmentName="seg_0" id="53CEDF5E-AA71-D339-8399-BA8A964EA165">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<tableSpace>AA608EBD-7D60-1A58-8B54-7009E5B9D421</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_PERSONA" id="553C8130-481E-3E5A-5E14-E5FCDA2D1F16">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA_FIN_PART" id="5CE61DF8-E26C-5F80-8813-895B64FBE11A">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA_REGISTRO" id="6E2A3395-4763-C7E7-6C72-4D2168962ADD">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ESTADO_PART" id="88BE7F1E-0E2D-F286-E4EF-B929F2134BEA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="OBSERVACIONES" id="A074867A-BA10-4D9D-383B-B607181D0A16">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PROGRAMA" id="DF525E90-A792-7D9D-2267-525C2026A180">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_BENEFICIARIO" id="E5EB3267-5CA6-3398-47BE-B82974AED15C">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="FECHA_INICIO_PART" id="F10BAF0C-5F2D-A461-D1E4-CD80E59C7D7E">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_BENEF_PROGRAMA" id="8BA8F44C-7D09-976D-A627-53EFEE612901">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<logging></logging>
+<tableSpace>AA608EBD-7D60-1A58-8B54-7009E5B9D421</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_BENEF_PERSONA" id="E1E076DF-40D2-9947-BA59-92AC765BD2CE">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<logging></logging>
+<tableSpace>AA608EBD-7D60-1A58-8B54-7009E5B9D421</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_BENEF_PROGRAMA" id="8EB7A597-2C65-2B6E-841C-3EB89A5B8FF9">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_BENEF_PERSONA" id="A47C5BED-2D75-5935-7384-05EE27EA8881">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_SIAC_BENEF" id="6770C091-E418-E7A5-34CB-94349F542FA4">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="UQ_BENEF_PROG_PER" id="A24F3AA9-F02F-3DFE-FF4B-F4B082A13A14">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

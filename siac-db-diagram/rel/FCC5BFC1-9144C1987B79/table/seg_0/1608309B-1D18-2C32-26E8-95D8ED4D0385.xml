@@ -1,0 +1,293 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1608309B-1D18-2C32-26E8-95D8ED4D0385" name="SIAC_VIVIENDA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Viviendas registradas por comunidad]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>86B0A56B-4036-2FA1-4D6B-12090C8C992F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VIVIENDA" id="553F9BE1-DFDB-EF83-EE3C-658347175973">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>45A33291-436C-E9A5-93B0-8A3FC22074E9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_VIVIENDA</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_VIVIENDA_BI</autoIncrementTriggerName>
+</Column>
+<Column name="DIRECCION_EXACTA" id="734290FB-A57F-1E31-A59B-D78CD632CEA1">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B360E746-8FE4-5845-9635-DB77C9316773</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3A983D15-C9F8-88F9-1300-33C5EA316DFB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_VIVIENDA_DIR</notNullConstraintName>
+</Column>
+<Column name="ID_COMUNIDAD" id="498AE61A-F09A-BCBA-C493-CC9FF0931E06">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>362B44AA-5745-D8AB-B5F6-064723D66AEC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_VIVIENDA_COM</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="7209FF34-2BDF-7B86-2169-1DE8B8F3F82F" referredColumn="46514625-CA6E-B068-6590-123EC17683BD"/>
+</associations>
+</Column>
+<Column name="CONDICION_GENERAL" id="C41C6AC7-1B54-1985-DEB0-46B10813DD4A">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado físico: BUENA / REGULAR / MALA]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>914E73F2-D3AE-AD55-A19B-1DB1BAC301AC</importedID>
+<constraintName>CK_VIVIENDA_COND</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="BUENA" description=""/>
+<valueDef value="MALA" description=""/>
+<valueDef value="REGULAR" description=""/>
+</listOfValues>
+<defaultValue>&apos;REGULAR&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_VIVIENDA" id="5E3E4BCC-8D1F-082A-FB3E-B12FF6808174">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>617CAC76-B79F-B392-92D5-38F69779A764</importedID>
+<constraintName>CK_VIVIENDA_TIPO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>03B243B6-2809-15A7-C9D0-2DAC0F6A9F78</domain>
+<listOfValues>
+<valueDef value="ALQUILADA" description=""/>
+<valueDef value="OTRO" description=""/>
+<valueDef value="PRESTADA" description=""/>
+<valueDef value="PROPIA" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATERIAL_PAREDES" id="99EC55AD-960C-F747-4E1D-C115BC21B268">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>CA677CF4-89CF-E739-59EE-15FF4357204D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EFE5C847-0903-AF64-34E0-CC57ED6CE72D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATERIAL_TECHO" id="A1833C86-FC6D-D122-CF90-DFC1068B0B2B">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>0901CA59-CB5C-91AB-6D53-87124A0B35D9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EFE5C847-0903-AF64-34E0-CC57ED6CE72D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCESO_AGUA" id="E74B299C-8F0D-26E4-DB04-60F60FAF0DD0">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[S = Sí tiene acceso, N = No tiene]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>90710F1F-2267-AB91-B6FA-A2F5258CC356</importedID>
+<constraintName>CK_VIVIENDA_AGUA</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCESO_ELECTRICIDAD" id="4972D3CB-9C54-312B-7A54-FC65DE88E508">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>5B988249-D642-9F4B-9E30-FE1116348355</importedID>
+<constraintName>CK_VIVIENDA_ELEC</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCESO_ALCANTARILLADO" id="7AE01CDC-3999-EC31-6219-6C68F1269DE9">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>3A0F4ED0-484F-10E4-BB34-51544FB18AB7</importedID>
+<constraintName>CK_VIVIENDA_ALCAN</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCESO_INTERNET" id="85953DF8-1FE0-C07F-0FCA-49A1A45547B2">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>820A45E5-E819-C43D-7324-67FC879426E5</importedID>
+<constraintName>CK_VIVIENDA_INET</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_SANITARIO" id="4FD41F00-BC0C-F91E-66E8-ED4AE9170B97">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[ADECUADO / INADECUADO / EN_REVISION]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>181615EA-E15A-E981-FB11-848F12D3DECD</importedID>
+<constraintName>CK_VIVIENDA_SANIT</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>89AF4618-2AC0-500C-03E4-15056F7BC80B</domain>
+<listOfValues>
+<valueDef value="ADECUADO" description=""/>
+<valueDef value="EN_REVISION" description=""/>
+<valueDef value="INADECUADO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ADECUADO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACIONES" id="AA4A7FBA-0D63-7098-4758-4A5058A1BDCC">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>683722E3-791E-3BF8-ADCA-5A88FFDD71AC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A68D10EB-86CE-252B-E492-8BFF89715765</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="3884102A-9927-9231-3324-8AA803E41A3C">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>5BF76364-4373-042A-D561-7D1417AF36A1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBAF2521-6CE2-710C-C76F-B4F078AC1D2D" name="PK_SIAC_VIVIENDA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>24A1E299-CCA6-6209-CC62-F594C60D976B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="553F9BE1-DFDB-EF83-EE3C-658347175973"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C151A05-7AC9-4C56-3063-E970D336341F" name="IDX_VIVIENDA_COMUNIDAD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>02D25BF5-7D3B-3A10-B325-5AF78AE1AC28</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="498AE61A-F09A-BCBA-C493-CC9FF0931E06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B04EC2E-676B-8A26-3807-9D3C9D191FD8" name="FK_VIVIENDA_COMUNIDAD">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="498AE61A-F09A-BCBA-C493-CC9FF0931E06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

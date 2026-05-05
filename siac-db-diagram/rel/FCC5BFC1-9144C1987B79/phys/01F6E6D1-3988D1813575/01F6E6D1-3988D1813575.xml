@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StorageDesignOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.StorageDesignOraclev20c" name="Oracle Database 21c" id="75B7BF5A-5DCF-FB6B-9A1C-A76D84CE3AA5" siteID="01F6E6D1-21D0-CFBD-ABDD-3988D1813575" siteName="Oracle Database 21c" siteType="17">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:22:56 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+</StorageDesignOraclev20c>

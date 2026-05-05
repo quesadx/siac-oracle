@@ -4,5 +4,12 @@
 <createdTime>2026-05-05 17:16:08 UTC</createdTime>
 <ownerDesignName>siac-db-diagram</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>siac-db.ddl</fileName>
+<pathName>/home/quesadx/github/siac-oracle</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
 </relationalModel>

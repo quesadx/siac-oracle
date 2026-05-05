@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2AF6CDF2-8180-5916-AB18-48F538AAB565" containerWithKeyObject="19F45F26-43C9-F1A8-AE2E-4BF8DD466204" localFKIndex="744C9DD9-9DF8-6BE1-DEE8-F1ACAB638043" name="FK_CONTACTO_TIPO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F39F9622-3302-225D-55FF-8A23416AF901</importedID>
+<referredTableLongName>SIAC_TIPO_CONTACTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E084084B-6685-E49A-DC2F-4A4C24624FFA</referredTableID>
+<keyObject>86637C41-2F81-602C-3A0B-3A1CDC396A84</keyObject>
+<referredKeyID>86637C41-2F81-602C-3A0B-3A1CDC396A84</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO_CONTACTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

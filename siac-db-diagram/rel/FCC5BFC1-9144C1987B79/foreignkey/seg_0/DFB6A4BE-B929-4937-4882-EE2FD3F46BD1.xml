@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DFB6A4BE-B929-4937-4882-EE2FD3F46BD1" containerWithKeyObject="5F87D766-89C5-E28B-E278-463D10896AD0" localFKIndex="0BD924AD-5F79-F8CB-B897-EC4927807C9A" name="FK_DISTRITO_REGION">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>02F5182E-527E-2644-E5DC-EC08AAF51586</importedID>
+<referredTableLongName>SIAC_REGION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DC967472-F93F-B6B4-DDB3-DE336910091C</referredTableID>
+<keyObject>56359747-3BC8-A5FA-C98D-453272D10AE2</keyObject>
+<referredKeyID>56359747-3BC8-A5FA-C98D-453272D10AE2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_REGION</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

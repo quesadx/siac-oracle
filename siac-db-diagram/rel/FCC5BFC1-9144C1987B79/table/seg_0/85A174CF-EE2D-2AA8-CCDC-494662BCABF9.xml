@@ -1,0 +1,308 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85A174CF-EE2D-2AA8-CCDC-494662BCABF9" name="SIAC_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Personas registradas en el sistema SIAC]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>ACB90130-13FD-868C-8717-392873051991</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PERSONA" id="71B2597A-C1DF-BC31-F55A-882ED69E856A">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>CE107F5A-094C-D723-CDA9-223B7FC3C178</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_PERSONA</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_PERSONA_BI</autoIncrementTriggerName>
+</Column>
+<Column name="CEDULA" id="C3242987-00F4-ED12-B48D-0CA35F3E7D3D">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número de identificación, único por persona]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>26E92CC9-90E9-7D21-407A-085D3FC91EA5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>58A2CB5A-BBC0-E57A-BDE9-47F721E820E6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PERSONA_CED</notNullConstraintName>
+</Column>
+<Column name="NOMBRE" id="902464B9-101D-44E2-3A1F-D118D7E795E7">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>DE25D351-6F5C-0A0E-3BA6-C3CB52C20184</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B32D909C-BA29-5209-7651-F17EA97242B0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PERSONA_NOM</notNullConstraintName>
+</Column>
+<Column name="APELLIDO1" id="43D0D5A3-CADD-B76C-7AE9-3A39A9C7C9B9">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>FF130ED1-C25E-3D12-11B5-7044DDD4DF9C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B32D909C-BA29-5209-7651-F17EA97242B0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PERSONA_AP1</notNullConstraintName>
+</Column>
+<Column name="APELLIDO2" id="5D42AECC-19BD-7E00-FCD5-B857CD377991">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>D1F1AD29-F8B4-7B13-5732-EE558CC9A14B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B32D909C-BA29-5209-7651-F17EA97242B0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_NACIMIENTO" id="4D2FE6EB-0B17-4FDF-FA6A-949146B3C23B">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>10347C12-BF73-55C5-C261-000DE5452360</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PERSONA_FNAC</notNullConstraintName>
+</Column>
+<Column name="SEXO" id="34BC4027-DE07-815B-F6E4-F8D478842CE1">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>974A0D78-3442-3945-A734-D7BB070E8B07</importedID>
+<constraintName>CK_PERSONA_SEXO</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="F" description=""/>
+<valueDef value="M" description=""/>
+<valueDef value="O" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PERSONA_SEXO</notNullConstraintName>
+</Column>
+<Column name="ESTADO_CIVIL" id="319FFEE2-9105-A0EB-CEC2-3CDA057F1DB9">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>25F73437-B0D8-ED2F-9C1D-33D9A103A9B1</importedID>
+<constraintName>CK_PERSONA_ECIVIL</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>89AF4618-2AC0-500C-03E4-15056F7BC80B</domain>
+<listOfValues>
+<valueDef value="CASADO" description=""/>
+<valueDef value="DIVORCIADO" description=""/>
+<valueDef value="SOLTERO" description=""/>
+<valueDef value="UNION_LIBRE" description=""/>
+<valueDef value="VIUDO" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NIVEL_EDUCATIVO" id="822C064B-94E4-973D-0250-05F768B721A0">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>2F08FB1F-2241-FF80-713C-E6FFB5BFE1D1</importedID>
+<constraintName>CK_PERSONA_EDUC</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>03B243B6-2809-15A7-C9D0-2DAC0F6A9F78</domain>
+<listOfValues>
+<valueDef value="NINGUNO" description=""/>
+<valueDef value="POSGRADO" description=""/>
+<valueDef value="PRIMARIA" description=""/>
+<valueDef value="SECUNDARIA" description=""/>
+<valueDef value="TECNICO" description=""/>
+<valueDef value="UNIVERSITARIO" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OCUPACION" id="D69075B5-F50A-9B41-AA6A-5C91E6B7EE84">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>871F5326-A298-80AE-F473-314D7E8BC0B8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>720DC55F-8D33-99FD-3779-E56B8268B4C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RELACION_FAMILIA" id="3D9A976E-E14A-7AAD-3805-32257F157EAB">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Rol de la persona dentro del grupo familiar]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>A2782D68-DC71-5358-0687-3E2FDFF473F2</importedID>
+<constraintName>CK_PERSONA_REL</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EFE5C847-0903-AF64-34E0-CC57ED6CE72D</domain>
+<listOfValues>
+<valueDef value="ABUELO" description=""/>
+<valueDef value="CONYUGUE" description=""/>
+<valueDef value="HERMANO" description=""/>
+<valueDef value="HIJO" description=""/>
+<valueDef value="JEFE" description=""/>
+<valueDef value="MADRE" description=""/>
+<valueDef value="OTRO" description=""/>
+<valueDef value="PADRE" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="85170DD2-FB91-4BD3-87F7-83E8FE6D02B4">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F6D01FBB-960E-A1E2-CAF3-472952028F32</importedID>
+<constraintName>CK_PERSONA_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="FALLECIDO" description=""/>
+<valueDef value="INACTIVO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="4C069163-B6E2-1E77-4E6C-B8144DE9AF33">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>AFBA85BD-4F34-49FE-D6DD-C805DB39CBF6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FAMILIA" id="AFAB2805-8B74-5594-3CF6-23C33BA2E394">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK → SIAC_FAMILIA: familia a la que pertenece]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>AE6C1228-0772-B86D-EAB5-AE133631FB0C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E58ACB9-862D-A440-6A03-9BEC8B692FB4" referredColumn="915FE102-89F2-A91E-2C7E-C9A7EE698720"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="535AA93B-BCA7-E04E-5987-151485F54F5F" name="PK_SIAC_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9FB141A0-A86C-42EC-E463-20A7FDBA9F9E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B9D5842-F31D-AC93-BD3C-5F2502F85587" name="UQ_PERSONA_CEDULA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>2C3E65F1-5D3D-B882-8A4C-11F5B3B04D9E</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3242987-00F4-ED12-B48D-0CA35F3E7D3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="958086DB-0DC1-0437-10B0-4C3C9253FC0C" name="IDX_PERSONA_FAMILIA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>E65EF19D-85D2-DCC6-401D-6F6DB3EF3F95</importedID>
+<indexExpression>ID_FAMILIA</indexExpression>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="77D4E43B-A1EB-9AC7-F75F-18B059C49B9C" name="IDX_PERSONA_CEDULA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>52A0A306-E3DC-2F2D-E174-D1A78F2FDBFC</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3242987-00F4-ED12-B48D-0CA35F3E7D3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C6ED692-1017-74A7-0E51-42C789D0BD17" name="FK_PERSONA_FAMILIA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AFAB2805-8B74-5594-3CF6-23C33BA2E394"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

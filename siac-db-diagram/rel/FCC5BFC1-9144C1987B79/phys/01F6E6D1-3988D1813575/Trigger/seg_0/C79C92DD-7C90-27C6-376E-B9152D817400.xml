@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SIAC_PERSONA_FAMILIA_AI" directorySegmentName="seg_0" id="C79C92DD-7C90-27C6-376E-B9152D817400">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:22:56 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<actions>INSERT, DELETE, UPDATE</actions>
+<body><![CDATA[BEGIN
+  IF INSERTING OR (UPDATING AND :NEW.ID_FAMILIA != :OLD.ID_FAMILIA) THEN
+    UPDATE SIAC_FAMILIA
+       SET CANTIDAD_MIEMBROS = (
+             SELECT COUNT(*) FROM SIAC_PERSONA
+              WHERE ID_FAMILIA = :NEW.ID_FAMILIA
+                AND ESTADO     = 'ACTIVO'
+           )
+     WHERE ID_FAMILIA = :NEW.ID_FAMILIA;
+  END IF;
+
+  IF DELETING OR (UPDATING AND :NEW.ID_FAMILIA != :OLD.ID_FAMILIA) THEN
+    UPDATE SIAC_FAMILIA
+       SET CANTIDAD_MIEMBROS = (
+             SELECT COUNT(*) FROM SIAC_PERSONA
+              WHERE ID_FAMILIA = :OLD.ID_FAMILIA
+                AND ESTADO     = 'ACTIVO'
+           )
+     WHERE ID_FAMILIA = :OLD.ID_FAMILIA;
+  END IF;
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<columns>AFAB2805-8B74-5594-3CF6-23C33BA2E394</columns>
+<table>85A174CF-EE2D-2AA8-CCDC-494662BCABF9</table>
+</TriggerOraclev10g>

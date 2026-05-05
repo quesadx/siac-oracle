@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SIAC_SEQ_CONTROL_SALUD" directorySegmentName="seg_0" id="C135DD66-B946-D099-4DE0-9FCF45230722">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:22:56 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<incrementBy>1</incrementBy>
+<noCache>YES</noCache>
+<startWith>1</startWith>
+</SequenceOraclev10g>

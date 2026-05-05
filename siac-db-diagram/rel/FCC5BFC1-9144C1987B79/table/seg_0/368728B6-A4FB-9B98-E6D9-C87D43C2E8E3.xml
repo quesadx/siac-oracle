@@ -1,0 +1,234 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="368728B6-A4FB-9B98-E6D9-C87D43C2E8E3" name="SIAC_PERSONA_ENFERMEDAD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Relación N:M entre personas y enfermedades]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>072890A3-C3E1-3DD5-D8B8-306F7D812691</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PERSONA_ENF" id="9CF8E566-D73C-D0AB-4AFE-1848EEC76877">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>24ADFB5C-4858-9780-5962-3C7677C41D49</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_PERSONA_ENF</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_PERS_ENF_BI</autoIncrementTriggerName>
+</Column>
+<Column name="ID_PERSONA" id="957A9939-E0DA-80D2-06F9-9426A753998F">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>40E39E61-E720-F9DA-AB52-9E47290F430E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PENFERM_PER</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="7C2E1198-F444-9E85-F775-4C022DF83AD4" referredColumn="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</associations>
+</Column>
+<Column name="ID_ENFERMEDAD" id="C7111FB9-0D24-45A5-A324-60FFE8FE7455">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F2B7D2EF-38E3-DEF5-49FC-EE7943B1765B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PENFERM_ENF</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="716099D3-6215-D5EE-75D4-43C71546BED4" referredColumn="5F083C03-9552-B562-1EFD-4FF334836BAA"/>
+</associations>
+</Column>
+<Column name="FECHA_DIAGNOSTICO" id="5CA6012A-009B-7C02-26FC-B1C95F78D3A7">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B21988D4-65AC-D503-7FE0-8CFB8C61BBB6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_PENFERM_FDIAG</notNullConstraintName>
+</Column>
+<Column name="ESTADO_CONDICION" id="11E397D9-7463-4086-0E23-A4102E729ADF">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado actual de la condición médica]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>A51B07AF-FA62-C3AA-1804-8D358636224C</importedID>
+<constraintName>CK_PENFERM_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>89AF4618-2AC0-500C-03E4-15056F7BC80B</domain>
+<listOfValues>
+<valueDef value="ACTIVA" description=""/>
+<valueDef value="CONTROLADA" description=""/>
+<valueDef value="EN_SEGUIMIENTO" description=""/>
+<valueDef value="RESUELTA" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVA&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEDICO_DIAGNOSTICO" id="AE7BD155-24FF-50FA-0A29-FCC57511FB97">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>0965C828-5CF1-69F1-4A88-43022D32F5BA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F910213-F7FA-2DE4-22BD-8C54E830565D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRATAMIENTO" id="ECD38FB3-9039-9433-00BC-45A3222B7218">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripción del tratamiento indicado]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>57F447B0-539A-B52D-DE8C-F277EC369114</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A68D10EB-86CE-252B-E492-8BFF89715765</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEGUIMIENTO" id="C8FDFB9F-5DBD-00C7-7FD5-47CC036C3757">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>0CD70451-8C50-60B9-10FE-1591216F725D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9F78C24C-DA46-9578-04E1-F8CB98595EE9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_RESOLUCION" id="07A3FEC3-483F-B4F8-AC5D-0A27FD467DD9">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>03C33CCC-04C4-546E-359A-1CFA70E3ECD6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="DAE8015B-732B-7C62-69EE-3795D797ABC8">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F0543B26-91ED-FA2F-B0D2-7A677F56A4E0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DB4C3DC-EB4C-E168-9420-E5B61DA4BB8E" name="PK_SIAC_PERS_ENF">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>1080F96F-B5AC-CC86-EFE3-0F58705084E3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CF8E566-D73C-D0AB-4AFE-1848EEC76877"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FF32553-5C7B-0DE1-1A34-5BF13AEAD451" name="UQ_PERSONA_ENFERMEDAD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>1085AFE3-09C5-3CB1-EAA2-BF3286978746</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="957A9939-E0DA-80D2-06F9-9426A753998F"/>
+<colUsage columnID="C7111FB9-0D24-45A5-A324-60FFE8FE7455"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C054A3F-3507-2913-2BE7-90343C969B26" name="IDX_PENF_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>518A6C09-B5DE-2999-C7C2-05F399A3B769</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="957A9939-E0DA-80D2-06F9-9426A753998F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A37F9A7E-1A0A-9890-43AE-A5E3A9BFEBCD" name="IDX_PENF_ENFER">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>8AB432CF-0F94-193E-72A3-6B2B191B3E3E</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7111FB9-0D24-45A5-A324-60FFE8FE7455"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A64464BD-D82C-0ECA-860C-F1742DE7B4CD" name="FK_PENFERM_ENFER">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7111FB9-0D24-45A5-A324-60FFE8FE7455"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71F2CBB8-DD45-0E7D-B93E-DB813AD7BCB5" name="FK_PENFERM_PERSONA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="957A9939-E0DA-80D2-06F9-9426A753998F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7C2E1198-F444-9E85-F775-4C022DF83AD4" containerWithKeyObject="368728B6-A4FB-9B98-E6D9-C87D43C2E8E3" localFKIndex="71F2CBB8-DD45-0E7D-B93E-DB813AD7BCB5" name="FK_PENFERM_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B5D5242A-6768-ADCB-D1E9-84A122306E28</importedID>
+<referredTableLongName>SIAC_PERSONA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>85A174CF-EE2D-2AA8-CCDC-494662BCABF9</referredTableID>
+<keyObject>535AA93B-BCA7-E04E-5987-151485F54F5F</keyObject>
+<referredKeyID>535AA93B-BCA7-E04E-5987-151485F54F5F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PERSONA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,252 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB2A6294-D95A-251A-CF22-E588219E8B98" name="SIAC_FAMILIA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Grupos familiares registrados en el SIAC]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>02557E67-6276-695C-6488-22A0DF9AF0AC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FAMILIA" id="915FE102-89F2-A91E-2C7E-C9A7EE698720">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>DCA3F770-CD7A-17E4-5BAE-EC86489B9DEF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_FAMILIA</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_FAMILIA_BI</autoIncrementTriggerName>
+</Column>
+<Column name="NOMBRE_FAMILIA" id="B8FF5995-ACF7-0755-79E6-4C28261BB370">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>230A1CE0-C5FA-F9F4-4344-4175A32D9660</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F910213-F7FA-2DE4-22BD-8C54E830565D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_FAMILIA_NOMBRE</notNullConstraintName>
+</Column>
+<Column name="ID_JEFE_FAMILIA" id="4A966E6F-8936-9176-E6DE-C0B0ABC3CC62">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK deferida → SIAC_PERSONA (jefe del hogar)]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>4F3E8B9F-81BF-AF75-36BC-26E070E82E7A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA7A9F88-47B0-4D79-3BC6-69B32E7296AB" referredColumn="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</associations>
+</Column>
+<Column name="CLASIFICACION_RIESGO" id="64123DF8-35BF-206D-6187-A66717C02E1D">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nivel de riesgo familiar: ALTO/MEDIO/BAJO]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>68BB7D1E-0CCF-21D4-604C-796AADBC677A</importedID>
+<constraintName>CK_FAMILIA_RIESGO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="ALTO" description=""/>
+<valueDef value="BAJO" description=""/>
+<valueDef value="MEDIO" description=""/>
+</listOfValues>
+<defaultValue>&apos;BAJO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_VIVIENDA" id="27DE8DAA-E26D-85A5-47E0-270890424302">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>BCD5FC35-8052-4634-EAE5-DA6D63597859</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_FAMILIA_VIV</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="D69451FC-C917-4226-9456-2CFCDBDE2642" referredColumn="553F9BE1-DFDB-EF83-EE3C-658347175973"/>
+</associations>
+</Column>
+<Column name="ID_COMUNIDAD" id="4E102E75-6C17-81C0-E7C7-C57442436F49">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>304F1A66-ABF8-D857-17C0-920A03236E5F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_FAMILIA_COM</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="943D8A4F-57FA-B4EC-50E3-ACBDB73FE894" referredColumn="46514625-CA6E-B068-6590-123EC17683BD"/>
+</associations>
+</Column>
+<Column name="CANTIDAD_MIEMBROS" id="CF31D196-BFF5-2E8B-5F4C-C6D48A593397">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B58687D5-3ACC-1BE2-6B95-73AD69A0E192</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6E64A045-207E-5E9D-9323-91C6FACE1B55</domain>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACIONES" id="E5826842-31D4-16DE-1545-65B20D2B4F41">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>5878EC49-60A9-8D11-B44E-E4145E36FA2B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A68D10EB-86CE-252B-E492-8BFF89715765</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="8A6BE825-3CF9-B768-6F72-87B76FB7EBA3">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>7B17FD5D-7DE8-BC92-856B-0A78E3081E24</importedID>
+<constraintName>CK_FAMILIA_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="INACTIVO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="C0B74172-33D8-0381-4803-D940C7C5A4EC">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>3E34ACA3-3698-2752-025E-09BF5605B431</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="836B59B7-1425-6FA3-909F-DAB717C74ECF" name="PK_SIAC_FAMILIA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>4B1D340E-0FF4-F78D-45AD-064F758ADCE2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="915FE102-89F2-A91E-2C7E-C9A7EE698720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="806D97E6-3865-61AF-B3E4-CE4EE91E7A9A" name="IDX_FAMILIA_VIVIENDA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>67CE16AB-162C-F203-98FD-473BE2228DFA</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27DE8DAA-E26D-85A5-47E0-270890424302"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA8F4F28-5775-0BB1-2816-A8813F6C56F2" name="IDX_FAMILIA_COMUNIDAD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>3FFB8F7F-D6AA-FB19-03C9-CCD29DE66ADD</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E102E75-6C17-81C0-E7C7-C57442436F49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CED6362-35C5-6C68-9A32-DF90DD6D75FC" name="IDX_FAMILIA_JEFE">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>2B8E9B5B-B9C4-DC8F-7222-BD914DE51C6F</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A966E6F-8936-9176-E6DE-C0B0ABC3CC62"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73BA5B7D-E61D-A926-0A4F-30A745B3020C" name="FK_FAMILIA_COMUNIDAD">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E102E75-6C17-81C0-E7C7-C57442436F49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DDD06E97-2226-651E-1967-FE0360DC18D2" name="FK_FAMILIA_JEFE">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A966E6F-8936-9176-E6DE-C0B0ABC3CC62"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1742CCF-20CA-7D73-702F-4F52F9E98DFC" name="FK_FAMILIA_VIVIENDA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27DE8DAA-E26D-85A5-47E0-270890424302"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

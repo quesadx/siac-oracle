@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F87D766-89C5-E28B-E278-463D10896AD0" name="SIAC_DISTRITO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Distritos dentro de cada región]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>C73B1A4D-AB38-326A-1B68-18643BF4A584</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DISTRITO" id="B7CBBF56-CC8A-1605-0844-3AEDFE3876FD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>87DA3B77-E68A-7FF0-95D9-30D230D59DA8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_DISTRITO</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_DISTRITO_BI</autoIncrementTriggerName>
+</Column>
+<Column name="NOMBRE" id="C87FDE85-5A2E-17E8-2869-F9F84B08D93B">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9AA90718-5292-B558-7621-FDF93011508A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B32D909C-BA29-5209-7651-F17EA97242B0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_DISTRITO_NOMBRE</notNullConstraintName>
+</Column>
+<Column name="DESCRIPCION" id="9154C622-0DBC-A76C-17EC-292877820F2F">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>4BE29F77-9FEA-1B5A-9812-FA63950AE205</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DB628160-812E-2A27-AA8B-43CD3E9C9DE1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGION" id="653E7C76-1936-FA15-4EDA-0C1A6C323172">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK → SIAC_REGION]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>6F40A09D-5CE5-201E-C259-087470E5A205</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_DISTRITO_REGION</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="DFB6A4BE-B929-4937-4882-EE2FD3F46BD1" referredColumn="735B9DBB-B38C-61E6-DF2E-E4E5F66365BE"/>
+</associations>
+</Column>
+<Column name="ESTADO" id="1F915033-5E85-6C3A-7DFA-6B41A83AD6FC">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>DA413BC7-32D7-A674-E3EE-2E6C7890B5DF</importedID>
+<constraintName>CK_DISTRITO_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="INACTIVO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="E8936CCB-3156-98DA-9477-97A699644CB1">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>73313B78-D63E-ABB0-1ACB-9C6F2C62DACB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="536CFD8C-B774-98A7-09F4-FE2960580562" name="PK_SIAC_DISTRITO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F4B4447F-3790-C3A7-06C8-706FF5C8F7DE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7CBBF56-CC8A-1605-0844-3AEDFE3876FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6B9FB3A-3C4A-48E3-5140-B2A4C6F0FB74" name="IDX_DISTRITO_REGION">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>C599AD1D-D96A-78AF-8270-1D4B2322BA87</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="653E7C76-1936-FA15-4EDA-0C1A6C323172"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BD924AD-5F79-F8CB-B897-EC4927807C9A" name="FK_DISTRITO_REGION">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="653E7C76-1936-FA15-4EDA-0C1A6C323172"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

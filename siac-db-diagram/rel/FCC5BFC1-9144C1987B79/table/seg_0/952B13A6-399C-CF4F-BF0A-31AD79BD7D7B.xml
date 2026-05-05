@@ -1,0 +1,235 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="952B13A6-399C-CF4F-BF0A-31AD79BD7D7B" name="SIAC_USUARIO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Usuarios con acceso al sistema SIAC]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>85A85569-1909-8D8E-1F72-7587ECB6D2F2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USUARIO" id="3D6E641D-DA2A-87A1-5EFB-6AFE1BFA782D">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B293DA08-0A1C-03AC-DEDC-1DD8E9099E8E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_USUARIO</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_USUARIO_BI</autoIncrementTriggerName>
+</Column>
+<Column name="USERNAME" id="566938F6-C3E1-5771-978A-3443BD748422">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>E1B3C81C-251D-0707-D468-CADE95186712</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>260AEA76-3D11-3A86-4EF5-AFE683BFBA7D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_USR_USER</notNullConstraintName>
+</Column>
+<Column name="PASSWORD_HASH" id="DF44BC07-7CB7-1E96-038D-59ED355D172F">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hash de la contraseña (nunca texto plano)]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9264B91B-18C6-FF76-1152-20590F828719</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>36552572-2578-9056-E83B-5DBDA107EAC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_USR_PASS</notNullConstraintName>
+</Column>
+<Column name="ID_PERSONA" id="2DA6CB12-0BCD-FF56-5E6B-825E1B70C45C">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>0A40EA0E-A117-A590-940C-9ABDED5EFB3A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51BF5DFA-BD71-5F2E-84BB-40567C7F77B5" referredColumn="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</associations>
+</Column>
+<Column name="ID_ROL" id="5693CEFE-09AC-B25C-F391-D028FE42627D">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>A90741E8-C188-0FE3-9530-1785348B2BAC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_USR_ROL</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="221664AE-D938-817D-CC83-9648247E662F" referredColumn="A8DD6C59-4F42-B9B2-FB84-8F99734083ED"/>
+</associations>
+</Column>
+<Column name="CORREO" id="478D4842-9E6D-4378-5834-AA91E43EF74B">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>B7DB7C74-2182-9AC0-0478-15A1682B4426</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F910213-F7FA-2DE4-22BD-8C54E830565D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="FFB54CCF-4C13-34BC-1CC0-F576BD2F8B6C">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>79F33551-2469-4577-5A56-6D50DE51FD09</importedID>
+<constraintName>CK_USR_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DE27422A-06CB-BD8F-3C11-1FB5E6D81C67</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="BLOQUEADO" description=""/>
+<valueDef value="INACTIVO" description=""/>
+<valueDef value="PENDIENTE" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTENTOS_FALLIDOS" id="B84E8E15-D929-0CF1-2B63-7B4F64D80C1E">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contador para bloqueo automático (max 3-5)]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>4EB41DA6-F32D-37CA-C0EF-E1A394606E36</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>4331AF51-E864-6691-1965-D6B8F28B6824</domain>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ULTIMO_ACCESO" id="2D141F98-100F-3B63-774C-73BC34625633">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Timestamp del último login exitoso]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>0A774EBC-E8B4-27F3-F33D-75A878E0A4A3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="0114B695-4397-4980-E27F-F21AA9618C43">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>92A8A123-C19A-948E-88C7-AD7EE36EE684</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91EACCDD-2ACC-FD62-3CAC-8069CC1ABDE1" name="PK_SIAC_USUARIO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>2B1C771D-82DD-6378-DE04-95CAAD48BC35</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D6E641D-DA2A-87A1-5EFB-6AFE1BFA782D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="300F42AF-C118-AA19-E511-0C4C87C2EFD7" name="UQ_USUARIO_USERNAME">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>CF397DC2-DECF-A7A1-FA0A-6A18D4DDBA63</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="566938F6-C3E1-5771-978A-3443BD748422"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C18B0622-0284-E7C7-9E70-0DD0BF73F7D5" name="IDX_USR_ROL">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>C9A596C0-60E5-3403-0C3B-BE3EBB991976</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5693CEFE-09AC-B25C-F391-D028FE42627D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82D54369-4694-7F1B-6DA3-BD274BD2DAB0" name="IDX_USR_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>37538D8E-6C78-8A3B-B11B-B9697063FBD9</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DA6CB12-0BCD-FF56-5E6B-825E1B70C45C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A2AF6EB-7ABF-92DF-6DAA-5991B26C56B5" name="FK_USUARIO_PERSONA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DA6CB12-0BCD-FF56-5E6B-825E1B70C45C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B7F2EDA-73B2-2770-E518-42D540BC7294" name="FK_USUARIO_ROL">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5693CEFE-09AC-B25C-F391-D028FE42627D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

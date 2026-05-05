@@ -1,0 +1,207 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53CEDF5E-AA71-D339-8399-BA8A964EA165" name="SIAC_BENEFICIARIO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Personas beneficiarias de programas comunitarios]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>1B1749C3-52C6-2A67-C7D7-279A82272FB1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BENEFICIARIO" id="E5EB3267-5CA6-3398-47BE-B82974AED15C">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>46069725-3304-FBEE-D01B-C40C2438EC61</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_BENEFICIARIO</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_BENEF_BI</autoIncrementTriggerName>
+</Column>
+<Column name="ID_PROGRAMA" id="DF525E90-A792-7D9D-2267-525C2026A180">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>95F4461F-A16C-3B2F-7E9C-8C8A367CBDC9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_BENEF_PROG</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="42904D5A-8627-6576-AC0C-E85B93701148" referredColumn="01C8D76E-BDB7-6772-808C-A22FCDE7ED3A"/>
+</associations>
+</Column>
+<Column name="ID_PERSONA" id="553C8130-481E-3E5A-5E14-E5FCDA2D1F16">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>668A99E1-57AF-041C-BC2A-1633A4509B38</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_BENEF_PER</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="CB0AB8BC-445A-052D-AB13-FD0A43A86CC1" referredColumn="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</associations>
+</Column>
+<Column name="FECHA_INICIO_PART" id="F10BAF0C-5F2D-A461-D1E4-CD80E59C7D7E">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>54025A98-85A7-92CB-4250-A95BC76CB9D0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_BENEF_FINO</notNullConstraintName>
+</Column>
+<Column name="FECHA_FIN_PART" id="5CE61DF8-E26C-5F80-8813-895B64FBE11A">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>C1A7261C-47AD-C182-53C9-6814E3E507B4</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_PART" id="88BE7F1E-0E2D-F286-E4EF-B929F2134BEA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado de participación en el programa]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>83A4EC26-F748-53A3-D8A9-D543E58479E0</importedID>
+<constraintName>CK_BENEF_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>89AF4618-2AC0-500C-03E4-15056F7BC80B</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="COMPLETADO" description=""/>
+<valueDef value="RETIRADO" description=""/>
+<valueDef value="SUSPENDIDO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACIONES" id="A074867A-BA10-4D9D-383B-B607181D0A16">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F1FAE22C-55A2-8474-C5FC-9768E08FAFF0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A68D10EB-86CE-252B-E492-8BFF89715765</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="6E2A3395-4763-C7E7-6C72-4D2168962ADD">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>627B0161-57D1-34E1-7713-81A9A5617D81</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6770C091-E418-E7A5-34CB-94349F542FA4" name="PK_SIAC_BENEF">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9EC542FD-C77E-C96C-1A85-6E709B3E6BD9</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5EB3267-5CA6-3398-47BE-B82974AED15C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A24F3AA9-F02F-3DFE-FF4B-F4B082A13A14" name="UQ_BENEF_PROG_PER">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>60CFB8B9-AD21-7191-8AF1-0F9A276FF5CD</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF525E90-A792-7D9D-2267-525C2026A180"/>
+<colUsage columnID="553C8130-481E-3E5A-5E14-E5FCDA2D1F16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8BA8F44C-7D09-976D-A627-53EFEE612901" name="IDX_BENEF_PROGRAMA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9ABAD923-3DC1-F549-4BAA-74279E2449B7</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF525E90-A792-7D9D-2267-525C2026A180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1E076DF-40D2-9947-BA59-92AC765BD2CE" name="IDX_BENEF_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>E42F6320-4DF9-B362-6AF1-457425976170</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="553C8130-481E-3E5A-5E14-E5FCDA2D1F16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A47C5BED-2D75-5935-7384-05EE27EA8881" name="FK_BENEF_PERSONA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="553C8130-481E-3E5A-5E14-E5FCDA2D1F16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EB7A597-2C65-2B6E-841C-3EB89A5B8FF9" name="FK_BENEF_PROGRAMA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF525E90-A792-7D9D-2267-525C2026A180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

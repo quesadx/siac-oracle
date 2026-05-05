@@ -5,4 +5,9 @@
 <ownerDesignName>siac-db-diagram</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>89F58721-DA4C-5737-1AD0-DE0F82709AFF</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="3017BB96-24CD-4065-CEEF-0EE9CE3F3D11">
+<designStoragePath>/siac-db</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

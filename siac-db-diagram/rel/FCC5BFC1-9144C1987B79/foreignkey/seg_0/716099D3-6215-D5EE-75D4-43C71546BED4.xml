@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="716099D3-6215-D5EE-75D4-43C71546BED4" containerWithKeyObject="368728B6-A4FB-9B98-E6D9-C87D43C2E8E3" localFKIndex="A64464BD-D82C-0ECA-860C-F1742DE7B4CD" name="FK_PENFERM_ENFER">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>E82FFF5A-0521-7556-7FB8-C07F99829C3B</importedID>
+<referredTableLongName>SIAC_ENFERMEDAD</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9FA5490A-BE7D-AFD5-DB29-394FA05650E0</referredTableID>
+<keyObject>37D1D652-0752-5EE8-CF84-FEDC29E1A321</keyObject>
+<referredKeyID>37D1D652-0752-5EE8-CF84-FEDC29E1A321</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ENFERMEDAD</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

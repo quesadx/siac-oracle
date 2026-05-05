@@ -1,0 +1,224 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="19F45F26-43C9-F1A8-AE2E-4BF8DD466204" name="SIAC_CONTACTO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Medios de contacto de personas o familias]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>BF89487D-F576-CBAC-B23B-37A76747FB2F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CONTACTO" id="BBDAF4A8-0959-DAE4-2435-84FE66D3F353">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>F60F5E03-19DC-70F5-E5DA-B9DE38D27BBA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SIAC_SEQ_CONTACTO</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_SIAC_CONTACTO_BI</autoIncrementTriggerName>
+</Column>
+<Column name="ID_TIPO_CONTACTO" id="1CEBEAE9-92FA-74E5-C2D3-39A769F23501">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>D6561CF0-FF6E-D6B7-3B06-DF3582632442</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_CONT_TIPO</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="2AF6CDF2-8180-5916-AB18-48F538AAB565" referredColumn="128533FC-DF98-5FB9-5E32-52A905CE0BF5"/>
+</associations>
+</Column>
+<Column name="VALOR" id="25C6449E-6CB3-B0FA-DE0E-74EDE5D980A0">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9C63CB96-5180-5C83-4CC1-BB269043432B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F910213-F7FA-2DE4-22BD-8C54E830565D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NN_CONT_VALOR</notNullConstraintName>
+</Column>
+<Column name="ID_PERSONA" id="AF3F9CBA-A306-AF45-63CA-45DFE831AABA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK opcional → SIAC_PERSONA]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>A8B83E45-9490-40DD-4617-C6810850C84F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95F058D5-1CD8-8BEF-4575-4526424A5F5E" referredColumn="71B2597A-C1DF-BC31-F55A-882ED69E856A"/>
+</associations>
+</Column>
+<Column name="ID_FAMILIA" id="75078505-06FB-1405-3E29-9C3378EBAFEF">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK opcional → SIAC_FAMILIA]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9A20B032-F69B-9406-580A-6AE1E686F37F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A09DBA01-F4D0-E4ED-2AAE-5E00FF23C193</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="382643DE-ABB5-9999-5AB1-B725DDE61F4E" referredColumn="915FE102-89F2-A91E-2C7E-C9A7EE698720"/>
+</associations>
+</Column>
+<Column name="ES_PRINCIPAL" id="07C95E44-EBCB-FE75-9AB8-28E7F10C29E9">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[S = contacto preferido para notificaciones]]></commentInRDBMS>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>5FE8434A-4229-2D5C-C5CB-5803B1399244</importedID>
+<constraintName>CK_CONT_PRINC</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F653DC48-6D05-7FFC-BCD5-31F07A15B677</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="S" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="3A41BA0E-D91E-D00A-CED7-281595732674">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>9CAD4198-7991-5E50-8B81-A30F5F72763C</importedID>
+<constraintName>CK_CONT_ESTADO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4845A467-886C-413D-B538-377F0A95BEAB</domain>
+<listOfValues>
+<valueDef value="ACTIVO" description=""/>
+<valueDef value="INACTIVO" description=""/>
+</listOfValues>
+<defaultValue>&apos;ACTIVO&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="A3FFCDA6-5974-138D-18ED-95A3B68B869E">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>7D0ADBB6-A9D1-6D83-85D0-919E100398CD</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>432DD530-CDD2-4AE9-B369-530A0E10FE74</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DB47166-7318-DED3-CF1E-9F4DD118E6D2" name="PK_SIAC_CONTACTO">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>4295A43D-6234-1BCC-7082-23B6C3FAE502</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBDAF4A8-0959-DAE4-2435-84FE66D3F353"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FE1F83D-F50E-FC1A-1B72-34743A6581B0" name="IDX_CONT_PERSONA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>678DC372-AE56-AF7E-F007-223B5D2EC89F</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF3F9CBA-A306-AF45-63CA-45DFE831AABA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F030DA2D-2A1C-959D-9318-F02CFD4EBCF3" name="IDX_CONT_FAMILIA">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>8D8902C4-EBEB-1550-25B4-1BA03ABEDB21</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75078505-06FB-1405-3E29-9C3378EBAFEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80078390-6711-3D89-38B9-E31AF5BE6B45" name="FK_CONTACTO_FAMILIA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75078505-06FB-1405-3E29-9C3378EBAFEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C1C3058-66FF-7806-FACA-E9CE9BD6D32E" name="FK_CONTACTO_PERSONA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF3F9CBA-A306-AF45-63CA-45DFE831AABA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="744C9DD9-9DF8-6BE1-DEE8-F1ACAB638043" name="FK_CONTACTO_TIPO">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:18 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CEBEAE9-92FA-74E5-C2D3-39A769F23501"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_CONTACTO_DUENO" directorySegmentName="seg_0" id="3100634D-662C-0352-4A64-B55460F87A60">
+<sourceDDLFile>siac-db.ddl</sourceDDLFile>
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:23:17 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<importedID>52E21FE1-871D-2F7E-9757-42FBE3E8E34D</importedID>
+<rule><![CDATA[(ID_PERSONA IS NOT NULL AND ID_FAMILIA IS NULL) OR (ID_PERSONA IS NULL AND ID_FAMILIA IS NOT NULL) OR (ID_PERSONA IS NOT NULL AND ID_FAMILIA IS NOT NULL)]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
