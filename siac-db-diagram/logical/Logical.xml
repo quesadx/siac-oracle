@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="5877814F-9ABB-4798-18BF-26AA7C393D81" mainViewID="920DE086-F047-7A7A-F2A7-C75381E9CCFA">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:16:08 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="3E1A8F92-233A-EC29-608A-7CCA270C85CC">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:16:08 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="siac-db-diagram" id="89F58721-DA4C-5737-1AD0-DE0F82709AFF" version="3.5">
+<createdBy>quesadx</createdBy>
+<createdTime>2026-05-05 17:16:08 UTC</createdTime>
+<ownerDesignName>siac-db-diagram</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>89F58721-DA4C-5737-1AD0-DE0F82709AFF</designId>
+</OSDM_Design>
