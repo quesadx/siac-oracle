@@ -5,18 +5,20 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           jdk17
+          dbeaver-bin
         ];
 
-        shellHook = ''
-        '';
+        shellHook = "";
       };
     };
 }
