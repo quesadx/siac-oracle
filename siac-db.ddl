@@ -1,6 +1,6 @@
 -- ============================================================
 -- AVANCE 2: MODELO RELACIONAL NORMALIZADO (3FN estricta)
--- Sistema de Información para Atención Comunitaria (SIAC)
+-- Sistema de Información para Atención Comunitaria (SIAC) [ Pasé el script por Prettier SQL]
 -- ============================================================
 -- 0. CONFIGURACIÓN INICIAL (ejecutar como SYSDBA)
 -- ============================================================
