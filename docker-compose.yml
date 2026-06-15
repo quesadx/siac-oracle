@@ -1,0 +1,31 @@
+services:
+  oracle:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: siac-oracle
+    hostname: siac-oracle
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      ORACLE_PASSWORD: AdminPass2026#
+      ORACLE_DATABASE: XE
+      APP_USER: mvargas
+      APP_USER_PASSWORD: SiacPass2026#
+      TZ: America/Costa_Rica
+    volumes:
+      - oradata:/opt/oracle/oradata
+      - ./docker/init:/container-entrypoint-initdb.d:ro
+      - ./siac-db.ddl:/opt/siac/siac-db.ddl:ro
+      - ./PckAtencionComunitaria.pks:/opt/siac/PckAtencionComunitaria.pks:ro
+      - ./PckAtencionComunitaria.pkb:/opt/siac/PckAtencionComunitaria.pkb:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+    restart: unless-stopped
+
+volumes:
+  oradata:
+    name: siac_oradata
