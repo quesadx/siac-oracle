@@ -56,7 +56,7 @@ END;
 /
 
 -- ============================================================
--- 2. SECUENCIAS (14 secuencias – ya no existe cantidad_miembros)
+-- 2. SECUENCIAS (16 secuencias)
 -- ============================================================
 CREATE SEQUENCE siac_seq_region         START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
 CREATE SEQUENCE siac_seq_distrito       START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
@@ -311,7 +311,7 @@ CREATE TABLE siac_control_salud (
     tension_arterial   VARCHAR2(15),
     resultado          VARCHAR2(1)   CONSTRAINT nn_ctrl_resultado NOT NULL
                      CONSTRAINT ck_ctrl_resultado CHECK (resultado IN ('N','A','C','P')),
-    profesional_resp   VARCHAR2(200) CONSTRAINT nn_ctrl_prof NOT NULL,
+    profesional_responsable VARCHAR2(200) CONSTRAINT nn_ctrl_prof NOT NULL,
     numero_expediente  VARCHAR2(50),
     observaciones      VARCHAR2(2000),
     fecha_registro     DATE DEFAULT SYSDATE,
@@ -398,10 +398,10 @@ CREATE TABLE siac_beneficiario (
     id_beneficiario   NUMBER      CONSTRAINT pk_siac_benef PRIMARY KEY,
     id_programa       NUMBER      CONSTRAINT nn_benef_prog NOT NULL,
     id_persona        NUMBER      CONSTRAINT nn_benef_per NOT NULL,
-    fecha_inicio_part DATE        CONSTRAINT nn_benef_fino NOT NULL,
-    fecha_fin_part    DATE,
-    estado_part       VARCHAR2(1) DEFAULT 'A' CONSTRAINT nn_benef_estado NOT NULL
-                      CONSTRAINT ck_benef_estado CHECK (estado_part IN ('A','C','R','S')),
+    fecha_inicio_participacion DATE       CONSTRAINT nn_benef_fino NOT NULL,
+    fecha_fin_participacion    DATE,
+    estado_participacion       VARCHAR2(1) DEFAULT 'A' CONSTRAINT nn_benef_estado NOT NULL
+                               CONSTRAINT ck_benef_estado CHECK (estado_participacion IN ('A','C','R','S')),
     observaciones     VARCHAR2(1000),
     fecha_registro    DATE DEFAULT SYSDATE,
     CONSTRAINT fk_benef_programa FOREIGN KEY (id_programa)
@@ -412,7 +412,7 @@ CREATE TABLE siac_beneficiario (
 ) TABLESPACE una;
 
 COMMENT ON TABLE  siac_beneficiario IS 'Personas beneficiarias de programas comunitarios';
-COMMENT ON COLUMN siac_beneficiario.estado_part IS 'A=Activo / C=Completado / R=Retirado / S=Suspendido';
+COMMENT ON COLUMN siac_beneficiario.estado_participacion IS 'A=Activo / C=Completado / R=Retirado / S=Suspendido';
 
 -- ============================================================
 -- 11. MÓDULO SEGURIDAD
@@ -434,8 +434,8 @@ COMMENT ON COLUMN siac_rol.estado IS 'Estado: A=Activo / I=Inactivo';
 -- 11.2 SIAC_USUARIO (tabla 16/16)
 CREATE TABLE siac_usuario (
     id_usuario          NUMBER        CONSTRAINT pk_siac_usuario PRIMARY KEY,
-    username            VARCHAR2(60)  CONSTRAINT nn_usr_user NOT NULL,
-    password_hash       VARCHAR2(512) CONSTRAINT nn_usr_pass NOT NULL,
+    nombre_usuario      VARCHAR2(60)  CONSTRAINT nn_usr_user NOT NULL,
+    hash_contrasena     VARCHAR2(512) CONSTRAINT nn_usr_pass NOT NULL,
     id_persona          NUMBER,
     id_rol              NUMBER        CONSTRAINT nn_usr_rol NOT NULL,
     correo              VARCHAR2(200),
@@ -444,7 +444,7 @@ CREATE TABLE siac_usuario (
     intentos_fallidos   NUMBER(2) DEFAULT 0,
     fecha_ultimo_acceso DATE,
     fecha_registro      DATE DEFAULT SYSDATE,
-    CONSTRAINT uq_usuario_username UNIQUE (username),
+    CONSTRAINT uq_usuario_nombre_usuario UNIQUE (nombre_usuario),
     CONSTRAINT fk_usuario_persona FOREIGN KEY (id_persona)
         REFERENCES siac_persona (id_persona),
     CONSTRAINT fk_usuario_rol FOREIGN KEY (id_rol)
@@ -452,7 +452,7 @@ CREATE TABLE siac_usuario (
 ) TABLESPACE una;
 
 COMMENT ON TABLE  siac_usuario IS 'Usuarios con acceso al sistema SIAC';
-COMMENT ON COLUMN siac_usuario.password_hash       IS 'Hash de la contraseña (nunca texto plano)';
+COMMENT ON COLUMN siac_usuario.hash_contrasena     IS 'Hash de la contraseña (nunca texto plano)';
 COMMENT ON COLUMN siac_usuario.estado              IS 'A=Activo / B=Bloqueado / I=Inactivo / P=Pendiente';
 COMMENT ON COLUMN siac_usuario.intentos_fallidos   IS 'Contador para bloqueo automático (max 3-5)';
 COMMENT ON COLUMN siac_usuario.fecha_ultimo_acceso IS 'Timestamp del último login exitoso';
@@ -468,6 +468,7 @@ CREATE INDEX idx_familia_vivienda      ON siac_familia (id_vivienda)        TABL
 CREATE INDEX idx_familia_jefe          ON siac_familia (id_jefe_familia)    TABLESPACE una;
 CREATE INDEX idx_persona_familia       ON siac_persona (id_familia)         TABLESPACE una;
 CREATE INDEX idx_persona_cedula        ON siac_persona (cedula)             TABLESPACE una;
+CREATE INDEX idx_cont_tipo            ON siac_contacto (id_tipo_contacto)   TABLESPACE una;
 CREATE INDEX idx_cont_persona          ON siac_contacto (id_persona)        TABLESPACE una;
 CREATE INDEX idx_cont_familia          ON siac_contacto (id_familia)        TABLESPACE una;
 CREATE INDEX idx_ctrl_persona          ON siac_control_salud (id_persona)   TABLESPACE una;
