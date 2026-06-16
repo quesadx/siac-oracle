@@ -11,18 +11,21 @@ CREATE TABLESPACE UNA
   EXTENT MANAGEMENT LOCAL
   SEGMENT SPACE MANAGEMENT AUTO;
 
-CREATE USER UNA IDENTIFIED BY "SiacPass2026#"
+CREATE USER MVARGAS IDENTIFIED BY "SiacPass2026#"
   DEFAULT TABLESPACE UNA
   TEMPORARY TABLESPACE TEMP
   QUOTA UNLIMITED ON UNA;
 
-GRANT CONNECT, RESOURCE           TO UNA;
-GRANT CREATE VIEW                 TO UNA;
-GRANT CREATE SEQUENCE             TO UNA;
-GRANT CREATE PROCEDURE            TO UNA;
-GRANT CREATE TRIGGER              TO UNA;
-GRANT EXP_FULL_DATABASE           TO UNA;
-GRANT IMP_FULL_DATABASE           TO UNA;
+GRANT CONNECT, RESOURCE                TO MVARGAS;
+GRANT CREATE VIEW                      TO MVARGAS;
+GRANT CREATE SEQUENCE                  TO MVARGAS;
+GRANT CREATE PROCEDURE                 TO MVARGAS;
+GRANT CREATE TRIGGER                   TO MVARGAS;
+GRANT CREATE TYPE                      TO MVARGAS;
+GRANT EXP_FULL_DATABASE                TO MVARGAS;
+GRANT IMP_FULL_DATABASE                TO MVARGAS;
+GRANT DATAPUMP_EXP_FULL_DATABASE       TO MVARGAS;
+GRANT DATAPUMP_IMP_FULL_DATABASE       TO MVARGAS;
 */
 -- ============================================================
 -- A partir de aquí, ejecutar conectado como el usuario creado
@@ -407,8 +410,7 @@ CREATE TABLE siac_beneficiario (
     CONSTRAINT fk_benef_programa FOREIGN KEY (id_programa)
         REFERENCES siac_programa (id_programa),
     CONSTRAINT fk_benef_persona FOREIGN KEY (id_persona)
-        REFERENCES siac_persona (id_persona),
-    CONSTRAINT uq_benef_prog_per UNIQUE (id_programa, id_persona)
+        REFERENCES siac_persona (id_persona)
 ) TABLESPACE una;
 
 COMMENT ON TABLE  siac_beneficiario IS 'Personas beneficiarias de programas comunitarios';
@@ -478,6 +480,12 @@ CREATE INDEX idx_penf_persona          ON siac_persona_enfermedad (id_persona)  
 CREATE INDEX idx_penf_enfer            ON siac_persona_enfermedad (id_enfermedad) TABLESPACE una;
 CREATE INDEX idx_benef_programa        ON siac_beneficiario (id_programa)   TABLESPACE una;
 CREATE INDEX idx_benef_persona         ON siac_beneficiario (id_persona)    TABLESPACE una;
+-- Índice único parcial: solo evita duplicados ACTIVOS en el mismo programa
+-- Personas con participación completada/retirada pueden reinscribirse
+CREATE UNIQUE INDEX uq_beneficiario_activo ON siac_beneficiario (
+    CASE WHEN estado_participacion = 'A' THEN id_programa END,
+    CASE WHEN estado_participacion = 'A' THEN id_persona END
+) TABLESPACE una;
 CREATE INDEX idx_usr_rol               ON siac_usuario (id_rol)             TABLESPACE una;
 CREATE INDEX idx_usr_persona           ON siac_usuario (id_persona)         TABLESPACE una;
 

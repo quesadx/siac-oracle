@@ -324,7 +324,7 @@ Seguimiento de controles preventivos y estado de salud de las personas.
 | `talla_cm` | NUMBER(5,2) | SÍ | - | Talla en centímetros | - |
 | `tension_arterial` | VARCHAR2(15) | SÍ | - | Lectura de presión arterial | - |
 | `resultado` | VARCHAR2(1) | NO | - | Resultado general del control | CHECK ('N','A','C','P') |
-| `profesional_resp` | VARCHAR2(200) | NO | - | Profesional responsable | - |
+| `profesional_responsable` | VARCHAR2(200) | NO | - | Profesional responsable | - |
 | `numero_expediente` | VARCHAR2(50) | SÍ | - | Número de expediente médico | - |
 | `observaciones` | VARCHAR2(2000) | SÍ | - | Notas del profesional | - |
 | `fecha_registro` | DATE | SÍ | SYSDATE | Fecha de creación del registro | - |
@@ -456,9 +456,9 @@ Gestión de programas sociales y de salud disponibles para la comunidad.
 | `id_beneficiario` | NUMBER | NO | - | Identificador único de la relación | **PK** |
 | `id_programa` | NUMBER | NO | - | Programa en el que participa | **FK** → siac_programa |
 | `id_persona` | NUMBER | NO | - | Persona beneficiaria | **FK** → siac_persona |
-| `fecha_inicio_part` | DATE | NO | - | Fecha de inicio de participación | - |
-| `fecha_fin_part` | DATE | SÍ | - | Fecha de fin de participación | - |
-| `estado_part` | VARCHAR2(1) | NO | 'A' | Estado de la participación | CHECK ('A','C','R','S') |
+| `fecha_inicio_participacion` | DATE | NO | - | Fecha de inicio de participación | - |
+| `fecha_fin_participacion` | DATE | SÍ | - | Fecha de fin de participación | - |
+| `estado_participacion` | VARCHAR2(1) | NO | 'A' | Estado de la participación | CHECK ('A','C','R','S') |
 | `observaciones` | VARCHAR2(1000) | SÍ | - | Notas sobre la participación | - |
 | `fecha_registro` | DATE | SÍ | SYSDATE | Fecha de creación del registro | - |
 
@@ -468,7 +468,7 @@ Gestión de programas sociales y de salud disponibles para la comunidad.
 - `idx_benef_programa` (id_programa)
 - `idx_benef_persona` (id_persona)
 
-**Restricción única:** Una persona no puede estar registrada dos veces en el mismo programa (UNIQUE en id_programa + id_persona).
+**Restricción única parcial:** Una persona no puede tener dos participaciones ACTIVAS en el mismo programa. Personas con participación completada, retirada o suspendida pueden reinscribirse. Implementado mediante índice único funcional (`uq_beneficiario_activo`).
 
 **Estados de participación:**
 - `A` = Activo
@@ -512,8 +512,8 @@ Control de acceso y autenticación de usuarios del sistema.
 | Columna | Tipo | Nulo | Default | Descripción | Restricciones |
 |---------|------|------|---------|-------------|---------------|
 | `id_usuario` | NUMBER | NO | - | Identificador único del usuario | **PK** |
-| `username` | VARCHAR2(60) | NO | - | Nombre de usuario para login | UNIQUE |
-| `password_hash` | VARCHAR2(512) | NO | - | Hash de la contraseña (nunca texto plano) | - |
+| `nombre_usuario` | VARCHAR2(60) | NO | - | Nombre de usuario para login | UNIQUE |
+| `hash_contrasena` | VARCHAR2(512) | NO | - | Hash de la contraseña (nunca texto plano) | - |
 | `id_persona` | NUMBER | SÍ | - | Persona asociada al usuario | **FK** → siac_persona |
 | `id_rol` | NUMBER | NO | - | Rol asignado | **FK** → siac_rol |
 | `correo` | VARCHAR2(200) | SÍ | - | Correo electrónico | - |
