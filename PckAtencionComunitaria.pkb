@@ -672,4 +672,3 @@ CREATE OR REPLACE PACKAGE BODY PckAtencionComunitaria IS
     END fcIndiceRiesgoFamiliar;
 
 END PckAtencionComunitaria;
-/

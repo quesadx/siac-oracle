@@ -102,4 +102,3 @@ CREATE OR REPLACE PACKAGE PckAtencionComunitaria IS
     ) RETURN NUMBER;
 
 END PckAtencionComunitaria;
-/
