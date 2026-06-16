@@ -6,7 +6,7 @@
 -- ============================================================
 /*
 CREATE TABLESPACE UNA
-  DATAFILE '/opt/oracle/oradata/XE/una01.dbf'
+  DATAFILE '/opt/oracle/oradata/FREE/FREEPDB1/una01.dbf'
   SIZE 200M AUTOEXTEND ON NEXT 50M MAXSIZE UNLIMITED
   EXTENT MANAGEMENT LOCAL
   SEGMENT SPACE MANAGEMENT AUTO;
@@ -467,7 +467,7 @@ CREATE INDEX idx_vivienda_comunidad    ON siac_vivienda (id_comunidad)      TABL
 CREATE INDEX idx_familia_vivienda      ON siac_familia (id_vivienda)        TABLESPACE una;
 CREATE INDEX idx_familia_jefe          ON siac_familia (id_jefe_familia)    TABLESPACE una;
 CREATE INDEX idx_persona_familia       ON siac_persona (id_familia)         TABLESPACE una;
-CREATE INDEX idx_persona_cedula        ON siac_persona (cedula)             TABLESPACE una;
+-- idx_persona_cedula omitido: uq_persona_cedula (UNIQUE) ya crea índice implícito
 CREATE INDEX idx_cont_tipo            ON siac_contacto (id_tipo_contacto)   TABLESPACE una;
 CREATE INDEX idx_cont_persona          ON siac_contacto (id_persona)        TABLESPACE una;
 CREATE INDEX idx_cont_familia          ON siac_contacto (id_familia)        TABLESPACE una;
